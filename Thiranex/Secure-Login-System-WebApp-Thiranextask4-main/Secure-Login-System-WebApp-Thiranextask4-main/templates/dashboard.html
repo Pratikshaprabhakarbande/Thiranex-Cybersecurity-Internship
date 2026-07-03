@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Secure Login System{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="welcome-section">
+        <h1 class="welcome-title">Welcome to Your Dashboard</h1>
+        <p class="welcome-subtitle">You have successfully logged in</p>
+    </div>
+
+    <!-- User Profile Card -->
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <span class="avatar-icon">👤</span>
+            </div>
+            <h2 class="profile-name">{{ user['username'] }}</h2>
+        </div>
+
+        <div class="profile-info">
+            <div class="info-item">
+                <label class="info-label">Email:</label>
+                <p class="info-value">{{ user['email'] }}</p>
+            </div>
+            <div class="info-item">
+                <label class="info-label">Account Created:</label>
+                <p class="info-value">{{ user['created_at'] or 'N/A' }}</p>
+            </div>
+            <div class="info-item">
+                <label class="info-label">Last Login:</label>
+                <p class="info-value">{{ user['last_login'] or 'This is your first login' }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <h2 class="section-title">🎯 Available Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Secure Authentication</h3>
+                <p class="feature-description">Your account is protected with industry-standard bcrypt password hashing</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Profile Management</h3>
+                <p class="feature-description">View and manage your account information safely</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3 class="feature-title">Session Protection</h3>
+                <p class="feature-description">Your session is protected with secure session management</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Fast & Reliable</h3>
+                <p class="feature-description">Built with Flask for optimal performance and security</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Highlights -->
+    <div class="security-section">
+        <h2 class="section-title">🔐 Security Highlights</h2>
+        <div class="security-checklist">
+            <div class="checklist-item">
+                <span class="check-icon">✓</span>
+                <span class="check-text"><strong>Hashed Passwords:</strong> Bcrypt ensures passwords are never stored in plain text</span>
+            </div>
+            <div class="checklist-item">
+                <span class="check-icon">✓</span>
+                <span class="check-text"><strong>SQL Injection Protection:</strong> Parameterized queries prevent database attacks</span>
+            </div>
+            <div class="checklist-item">
+                <span class="check-icon">✓</span>
+                <span class="check-text"><strong>Input Validation:</strong> All user inputs are validated for format and safety</span>
+            </div>
+            <div class="checklist-item">
+                <span class="check-icon">✓</span>
+                <span class="check-text"><strong>Session Management:</strong> Secure sessions prevent unauthorized access</span>
+            </div>
+            <div class="checklist-item">
+                <span class="check-icon">✓</span>
+                <span class="check-text"><strong>Safe Logout:</strong> Sessions are cleared on logout for complete security</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+</div>
+{% endblock %}

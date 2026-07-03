@@ -1,0 +1,28 @@
+# Password Strength Analyzer - Requirements
+# Python built-in modules used (no external dependencies needed)
+# This project uses only Python standard library
+
+# Note: The following are included in Python standard library:
+# - tkinter (GUI)
+# - re (regex for pattern matching)
+# - secrets (cryptographic randomness)
+# - string (character sets)
+# - hashlib (password hashing)
+# - sqlite3 (database)
+# - datetime (timestamps)
+# - os (system operations)
+
+# Python version requirement:
+# Python 3.6+ (for secrets module support)
+
+# To run this project, ensure you have:
+# 1. Python 3.6 or higher installed
+# 2. Tkinter installed (usually comes with Python, but on Linux you may need to install it separately)
+
+# Installation instructions:
+# - Windows: Python 3.6+ comes with tkinter by default
+# - Mac: brew install python-tk
+# - Linux (Ubuntu/Debian): sudo apt-get install python3-tk
+# - Linux (Fedora): sudo dnf install python3-tkinter
+
+# No pip packages required!

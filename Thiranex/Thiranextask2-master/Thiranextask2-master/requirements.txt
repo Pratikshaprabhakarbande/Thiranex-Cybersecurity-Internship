@@ -1,0 +1,15 @@
+# Vulnerability Scanner Requirements
+# This project uses mainly Python standard library for maximum compatibility
+
+# Optional: For advanced features (uncomment if needed)
+# python-nmap==0.0.1          # For Nmap integration (requires Nmap installed)
+# requests==2.31.0            # For HTTP banner grabbing
+# colorama==0.4.6             # For cross-platform colored terminal output (Windows/Mac/Linux)
+
+# Current version works with:
+# Python 3.7+
+# All required modules are part of Python standard library:
+# - socket (networking)
+# - threading (concurrent operations)
+# - datetime (timestamps)
+# - sys (system operations)
